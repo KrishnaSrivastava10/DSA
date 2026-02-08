@@ -39,3 +39,26 @@
 // Average: O(n log n)
 // Worst: O(n²)
 // Space: O(log n)
+// SC - 
+// Average case: O(log n)
+// Worst case: O(n)
+
+
+// OPTIMAL SOLUTION
+
+class Solution {
+    public static int largest(int[] arr) {
+    int n = arr.length;
+    int max = arr[0];
+    for(int i=0;i<n;i++){
+        if(arr[i]>max){
+            max = arr[i];
+        }
+    }
+    
+    return max;
+    }
+}
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
