@@ -17,3 +17,38 @@ for (int x : arr) {
 
 Important Note
 - Using Set is easy but not optimal for sorted arrays
+
+
+
+
+ARRAY LIST (Java)
+- ArrayList is a dynamic array in Java
+- It is part of Collection Framework
+- Located in java.util package
+- Size can grow or shrink automatically
+
+ArrayList<Integer> list = new ArrayList<>();
+
+- Example
+ArrayList<Integer> list = new ArrayList<>();
+list.add(10);
+list.add(20);
+list.add(30);
+System.out.println(list.get(1)); // 20
+
+What ArrayList does
+- Stores elements in index-based order
+- Allows duplicate values
+- Allows random access using index
+- Internally uses an array
+
+| Feature           | Array                         | ArrayList                   |
+| ----------------- | ----------------------------- | --------------------------- |
+| Size              | Fixed size                    | Dynamic size                |
+| Part of           | Language feature              | Collection Framework        |
+| Can grow          | ❌ No                          | ✅ Yes                       |
+| Stores primitives | ✅ Yes                         | ❌ No (uses wrapper classes) |
+| Stores objects    | ✅ Yes                         | ✅ Yes                       |
+| Built-in methods  | ❌ Very few                    | ✅ Many (add, remove, size)  |
+| Type safety       | Can store mixed (if Object[]) | Generic (type-safe)         |
+
