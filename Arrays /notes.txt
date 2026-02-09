@@ -1,1 +1,19 @@
+SET (Java)
+- Set is a collection in Java that does not allow duplicate elements
+- It is mainly used to store unique values
 
+Why use Set?
+- To remove duplicates from array or list
+- To store unique data only
+
+Set<Integer> set = new HashSet<>();
+
+- Example
+int[] arr = {1, 1, 2, 2, 3};
+Set<Integer> set = new HashSet<>();
+for (int x : arr) {
+    set.add(x);
+}
+
+Important Note
+- Using Set is easy but not optimal for sorted arrays
