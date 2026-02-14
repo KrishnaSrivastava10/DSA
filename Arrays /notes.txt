@@ -7,7 +7,6 @@ Why use Set?
 - To store unique data only
 
 Set<Integer> set = new HashSet<>();
-
 - Example
 int[] arr = {1, 1, 2, 2, 3};
 Set<Integer> set = new HashSet<>();
@@ -19,7 +18,41 @@ Important Note
 - Using Set is easy but not optimal for sorted arrays
 
 
+HashSet vs LinkedHashSet (Removing Duplicates)
+❌ HashSet
 
+Does not maintain order
+Stores elements based on hashing
+Output order may be random
+Removes duplicates ✅
+
+Example
+Set<Integer> set = new HashSet<>();
+int[] arr = {10, 23, 23, 27};
+for (int x : arr) {
+    set.add(x);
+}
+System.out.println(set);
+// Output order not guaranteed
+
+✅ LinkedHashSet
+Maintains insertion order
+Removes duplicates automatically
+Best choice when order must be preserved
+
+Example
+Set<Integer> set = new LinkedHashSet<>();
+int[] arr = {10, 23, 23, 27};
+for (int x : arr) {
+    set.add(x);
+}
+System.out.println(set);
+// Output: [10, 23, 27]
+
+Key Point (Interview)
+Use HashSet → when order does not matter
+Use LinkedHashSet → when order must be preserved
+For sorted array problems → prefer LinkedHashSet
 
 ARRAY LIST (Java)
 - ArrayList is a dynamic array in Java
@@ -28,7 +61,6 @@ ARRAY LIST (Java)
 - Size can grow or shrink automatically
 
 ArrayList<Integer> list = new ArrayList<>();
-
 - Example
 ArrayList<Integer> list = new ArrayList<>();
 list.add(10);
