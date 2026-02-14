@@ -27,27 +27,16 @@ class Solution {
 // 2 POINTERS
 
 class Solution {
-    ArrayList<Integer> removeDuplicates(int[] arr) {
-
-        ArrayList<Integer> result = new ArrayList<>();
-
-        if (arr.length == 0)
-            return result;
-
-        int i = 0;
-
-        for (int j = 1; j < arr.length; j++) {
-            if (arr[i] != arr[j]) {
+    public int removeDuplicates(int[] nums) {
+        if(nums.length == 0) return 0;
+        int i=0;
+        for(int j=1;j<nums.length;j++){
+            if(nums[i]!=nums[j]){
+                nums[i+1] = nums[j];
                 i++;
-                arr[i] = arr[j];
             }
         }
-
-        for (int k = 0; k <= i; k++) {
-            result.add(arr[k]);
-        }
-
-        return result;
+        return i+1;
     }
 }
 
