@@ -21,3 +21,35 @@ class Solution {
 
 // TC -
 // O(nlogn)
+
+
+// OPTIMAL 
+// 2 POINTERS
+
+class Solution {
+    ArrayList<Integer> removeDuplicates(int[] arr) {
+
+        ArrayList<Integer> result = new ArrayList<>();
+
+        if (arr.length == 0)
+            return result;
+
+        int i = 0;
+
+        for (int j = 1; j < arr.length; j++) {
+            if (arr[i] != arr[j]) {
+                i++;
+                arr[i] = arr[j];
+            }
+        }
+
+        for (int k = 0; k <= i; k++) {
+            result.add(arr[k]);
+        }
+
+        return result;
+    }
+}
+
+// TC - 
+// O(n)
